@@ -15,5 +15,12 @@ $font-family-base: 'Open Sans', sans-serif; //Tipo de letra
 $body-color: $texto; //Color del texto
 $font-size-root: 15px; //Tamaño del texto
 
-@import '../libs/bootstrap/scss/bootstrap'
+// Componente Navbar
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: $principal;
+$navbar-dark-active-color: $principal;
 
+@import '../libs/bootstrap/scss/bootstrap';
