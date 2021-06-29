@@ -29,4 +29,13 @@ $btn-border-radius: 0.2rem;
 $btn-padding-y: 0.8rem;
 $btn-padding-x: 2.4rem;
 
+////////////////////////////////////////////
+// 3. Cargando funciones nativas de Bootstrap
+////////////////////////////////////////////
+@include media-breakpoint-up(lg) {
+	:root {
+		font-size: 16px;
+	}
+}
+
 @import '../libs/bootstrap/scss/bootstrap';
