@@ -52,3 +52,21 @@ $btn-padding-x: 2.4rem;
 		background: url('../images/fondoBienvenidos-lg.jpg') center center/cover fixed;
 	}
 }
+
+// Clase Cover reutilizable | Aplica una capa semitransparente donde se inserte
+.fondoCover {
+	position: relative;
+	&::before {
+		content: '';
+		background-color: $secundario;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.6;
+	}
+	& > * {
+		position: relative;
+	}
+}

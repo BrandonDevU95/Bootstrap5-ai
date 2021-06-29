@@ -12202,4 +12202,23 @@ fieldset:disabled .btn {
     background: url("../images/fondoBienvenidos-lg.jpg") center center/cover fixed;
   }
 }
+
+.fondoCover {
+  position: relative;
+}
+
+.fondoCover::before {
+  content: '';
+  background-color: #293549;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+
+.fondoCover > * {
+  position: relative;
+}
 /*# sourceMappingURL=estilos.css.map */
