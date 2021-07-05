@@ -108,3 +108,17 @@ $utilities: (
 	content: '\f62a';
 	color: $principal;
 }
+
+// Personalizamos el menu desplegable
+@include media-breakpoint-down(md) {
+	.navbar-nav {
+		background: $secundario;
+		border-radius: 0.3rem;
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		padding: 1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	}
+}

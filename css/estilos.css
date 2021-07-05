@@ -12263,4 +12263,17 @@ fieldset:disabled .btn {
   content: '\f62a';
   color: #dc273c;
 }
+
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    background: #293549;
+    border-radius: 0.3rem;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 1px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  }
+}
 /*# sourceMappingURL=estilos.css.map */
