@@ -29,6 +29,35 @@ $btn-border-radius: 0.2rem;
 $btn-padding-y: 0.8rem;
 $btn-padding-x: 2.4rem;
 
+////////////////////////////////////////////
+// 3. Cargando funciones nativas de Bootstrap
+////////////////////////////////////////////
+@import '../libs/bootstrap/scss/functions';
+@import '../libs/bootstrap/scss/variables';
+@import '../libs/bootstrap/scss/mixins';
+
+////////////////////////////////////////////
+// 4. Api de utilidades perzonalizadas
+////////////////////////////////////////////
+
+$utilities: (
+	'Orden de capas': (
+		property: z-index,
+		responsive: false,
+		class: z-index,
+		values: (
+			n2: -2,
+			n1: -1,
+			0: 0,
+			1: 1,
+			2: 2,
+			3: 3,
+			4: 4,
+			5: 5,
+		),
+	),
+);
+
 @import '../libs/bootstrap/scss/bootstrap';
 
 ////////////////////////////////////////////
