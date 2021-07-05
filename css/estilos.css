@@ -12221,4 +12221,14 @@ fieldset:disabled .btn {
 .fondoCover > * {
   position: relative;
 }
+
+.navbar-toggler i::before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded='true'] i::before {
+  content: '\f62a';
+  color: #dc273c;
+}
 /*# sourceMappingURL=estilos.css.map */

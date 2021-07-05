@@ -70,3 +70,12 @@ $btn-padding-x: 2.4rem;
 		position: relative;
 	}
 }
+
+.navbar-toggler i::before {
+	transition: all 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded='true'] i::before {
+	content: '\f62a';
+	color: $principal;
+}
