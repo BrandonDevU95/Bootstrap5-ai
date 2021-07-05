@@ -12276,4 +12276,28 @@ fieldset:disabled .btn {
             box-shadow: 0 1px rgba(0, 0, 0, 0.4);
   }
 }
+
+.tituloconLinea {
+  margin: 0;
+  padding: 0;
+}
+
+.tituloconLinea::after {
+  content: '';
+  display: block;
+  width: 150px;
+  border-bottom: 3px solid;
+  margin: 1.3rem 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .tituloconLinea::after {
+    width: 400px;
+    margin: 1.8rem 0;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */

@@ -60,18 +60,20 @@ $utilities: (
 
 @import '../libs/bootstrap/scss/bootstrap';
 
-////////////////////////////////////////////
-// 3. Cargando funciones nativas de Bootstrap
-////////////////////////////////////////////
+///////////////////////////////////////
+// 6. Estilos Generales
+//////////////////////////////////////
+
 @include media-breakpoint-up(lg) {
 	:root {
 		font-size: 16px;
 	}
 }
 
-////////////////////////////////////////////
-// 4. Estilos para encabezados
-////////////////////////////////////////////
+///////////////////////////////////////
+// 7. Estilos para el encabezado
+//////////////////////////////////////
+
 .encabezado {
 	background: url('../images/fondoBienvenidos.jpg') center center/cover fixed;
 }
@@ -120,5 +122,28 @@ $utilities: (
 		padding: 1rem;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		box-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	}
+}
+
+///////////////////////////////////////
+// 8. Estilos para Plan de acción
+//////////////////////////////////////
+
+.tituloconLinea {
+	margin: 0;
+	padding: 0;
+	&::after {
+		content: '';
+		display: block;
+		width: 150px;
+		border-bottom: 3px solid;
+		margin: 1.3rem 0;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(lg) {
+			width: 400px;
+			margin: 1.8rem 0;
+		}
 	}
 }
