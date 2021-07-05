@@ -12300,4 +12300,16 @@ fieldset:disabled .btn {
     margin: 1.8rem 0;
   }
 }
+
+.planAccionItem {
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.planAccionItem:hover {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
 /*# sourceMappingURL=estilos.css.map */

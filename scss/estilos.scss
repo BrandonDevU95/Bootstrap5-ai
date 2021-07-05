@@ -147,3 +147,10 @@ $utilities: (
 		}
 	}
 }
+
+.planAccionItem {
+	transition: box-shadow 0.3s ease;
+}
+.planAccionItem:hover {
+	box-shadow: $box-shadow;
+}
