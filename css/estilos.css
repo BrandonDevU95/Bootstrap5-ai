@@ -12312,4 +12312,14 @@ fieldset:disabled .btn {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
+
+.teAyudamos {
+  background: url("../images/fondoTeAyudamos.jpg") center center/cover;
+}
+
+@media (min-width: 992px) {
+  .teAyudamos {
+    background: url("../images/fondoTeAyudamos-lg.jpg") center center/cover;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */

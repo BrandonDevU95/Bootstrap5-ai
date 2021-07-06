@@ -154,3 +154,14 @@ $utilities: (
 .planAccionItem:hover {
 	box-shadow: $box-shadow;
 }
+
+///////////////////////////////////////
+// 9. Estilos para Te ayudamos
+//////////////////////////////////////
+.teAyudamos {
+	background: url('../images/fondoTeAyudamos.jpg') center center/cover;
+
+	@include media-breakpoint-up(lg) {
+		background: url('../images/fondoTeAyudamos-lg.jpg') center center/cover;
+	}
+}
