@@ -1,3 +1,12 @@
+/*  .row > * {
+  border: 1px solid red;
+}  */
+
+/* Evita Scrool al actualizarse la página con Live server | Usar sólo en desarrollo*/
+html {
+	scroll-behavior: initial !important;
+}
+
 /////////////////////////////////////
 // 1. Patron de colores
 ////////////////////////////////////
@@ -37,7 +46,7 @@ $btn-padding-x: 2.4rem;
 @import '../libs/bootstrap/scss/mixins';
 
 ////////////////////////////////////////////
-// 4. Api de utilidades perzonalizadas
+// 4. Api de utilidades personalizadas
 ////////////////////////////////////////////
 
 $utilities: (
@@ -58,7 +67,25 @@ $utilities: (
 	),
 );
 
-@import '../libs/bootstrap/scss/bootstrap';
+@import '../libs/bootstrap/scss/utilities';
+
+////////////////////////////////////////////
+// 5. Imprimiendo Bootstrap
+////////////////////////////////////////////
+
+/* @import "../libs/bootstrap/scss/bootstrap"; */
+
+@import '../libs/bootstrap/scss/reboot';
+@import '../libs/bootstrap/scss/type';
+@import '../libs/bootstrap/scss/images';
+@import '../libs/bootstrap/scss/containers';
+@import '../libs/bootstrap/scss/grid';
+@import '../libs/bootstrap/scss/forms';
+@import '../libs/bootstrap/scss/buttons';
+@import '../libs/bootstrap/scss/transitions';
+@import '../libs/bootstrap/scss/nav';
+@import '../libs/bootstrap/scss/navbar';
+@import '../libs/bootstrap/scss/utilities/api';
 
 ///////////////////////////////////////
 // 6. Estilos Generales
@@ -73,13 +100,10 @@ $utilities: (
 ///////////////////////////////////////
 // 7. Estilos para el encabezado
 //////////////////////////////////////
-
 .encabezado {
 	background: url('../images/fondoBienvenidos.jpg') center center/cover fixed;
-}
 
-@include media-breakpoint-up(lg) {
-	.encabezado {
+	@include media-breakpoint-up(lg) {
 		background: url('../images/fondoBienvenidos-lg.jpg') center center/cover fixed;
 	}
 }
@@ -87,6 +111,7 @@ $utilities: (
 // Clase Cover reutilizable | Aplica una capa semitransparente donde se inserte
 .fondoCover {
 	position: relative;
+
 	&::before {
 		content: '';
 		background-color: $secundario;
@@ -102,15 +127,17 @@ $utilities: (
 	}
 }
 
+.fondoCover > * {
+	position: relative;
+}
+// Estilos Menu Toggle
 .navbar-toggler i::before {
 	transition: all 0.3s ease;
 }
-
 .navbar-toggler[aria-expanded='true'] i::before {
 	content: '\f62a';
 	color: $principal;
 }
-
 // Personalizamos el menu desplegable
 @include media-breakpoint-down(md) {
 	.navbar-nav {
@@ -128,7 +155,6 @@ $utilities: (
 ///////////////////////////////////////
 // 8. Estilos para Plan de acción
 //////////////////////////////////////
-
 .tituloconLinea {
 	margin: 0;
 	padding: 0;
@@ -163,5 +189,66 @@ $utilities: (
 
 	@include media-breakpoint-up(lg) {
 		background: url('../images/fondoTeAyudamos-lg.jpg') center center/cover;
+	}
+}
+
+///////////////////////////////////////
+// 10. Estilos para Proyectos
+//////////////////////////////////////
+
+.itemProyecto {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		background: $secundario;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	&:hover::before {
+		opacity: 0.8;
+	}
+
+	h3 {
+		position: absolute;
+		bottom: -3rem;
+		margin-bottom: 0;
+		width: 100%;
+		text-align: center;
+		color: white;
+		transition: bottom 0.6s ease;
+	}
+	&:hover h3 {
+		bottom: 3rem;
+	}
+}
+
+///////////////////////////////////////
+// 11. Estilos para el Pie de página
+//////////////////////////////////////
+.pieDePagina {
+	a {
+		color: #748494;
+		text-decoration: none;
+	}
+	.redesSociales {
+		a {
+			color: #212529;
+			background: #748394;
+			width: 1.8rem;
+			height: 1.8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0.3rem;
+		}
+	}
+	.creditos {
+		border-top: 1px solid black;
 	}
 }
